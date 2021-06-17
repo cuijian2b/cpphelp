@@ -10,11 +10,16 @@ public:
     ~classA() {
         cout << "~classA()" << endl;
     }
+
+    static int getState() {
+        return st;
+    }
 private:
     static int st;
 private:
     int a;
 };
+int classA::st = 0;
 
 class classB : public classA
 {
